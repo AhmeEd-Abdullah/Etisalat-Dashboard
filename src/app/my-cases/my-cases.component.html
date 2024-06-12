@@ -1,0 +1,50 @@
+<div class="my-cases container">
+    <h5 class="section-title">my cases</h5>
+    <div class="row navigation-bar">
+        <div class="d-flex justify-content-between col-lg-8">
+            <ul class="links">
+                <li><a class="active" href="">test cases</a></li>
+                <li><a href="" class="text-black-50">requests</a></li>
+            </ul>
+            <div class="d-flex align-items-center view-all" role="button">
+                <span class="me-1 text-bold">View All</span>
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row cases-details">
+        <div class="test-cases col-lg-8">
+            <ng-container *ngFor="let post of posts; let i = index">
+                <div class="case" *ngIf="i < 4">
+                    <div class="id-section d-flex justify-content-between">
+                        <span>#1115893230</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="discription">
+                        <div class="title fw-bolder">{{post.title}}</div>
+                        <div class="name position-relative">Module Name</div>
+                    </div>
+                    <div class="info d-flex justify-content-between">
+                        <div class="zone d-flex">
+                            <div class="date pe-2 position-relative">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>{{currentDate | date}}</span>
+                            </div>
+                            <div class="time ps-2">
+                                <i class="fa-regular fa-clock"></i>
+                                <span>{{currentDate | date : 'hh:mm:ss a'}}</span>
+                            </div>
+                        </div>
+                        <button class="custom-btn"
+                            [style.backgroundColor]="buttonBackgrounds[i]">{{buttonLabels[i]}}</button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="col-lg-4">
+            <div class="chart">
+                <app-chart></app-chart>
+            </div>
+        </div>
+    </div>
+</div>

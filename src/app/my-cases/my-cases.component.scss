@@ -1,0 +1,115 @@
+.my-cases {
+  .navigation-bar {
+    margin-bottom: 2rem;
+    .links {
+      .active {
+        color: black !important;
+        &::before {
+          height: 4px !important;
+          width: 30% !important;
+        }
+      }
+    }
+    .view-all {
+      margin-right: 10px;
+      color: red;
+      span {
+        font-weight: bold;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .cases-details {
+    row-gap: 24px;
+    .test-cases {
+      gap: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 18px;
+      .case {
+        min-width: 80%;
+        flex: 1;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+        @media (min-width: 767px) {
+          min-width: 35%;
+        }
+        .id-section {
+          i {
+            color: red;
+          }
+        }
+        .discription {
+          margin: 5px 0 10px;
+          .title {
+            text-transform: capitalize;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          .name {
+            top: -2px;
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+        }
+        .info {
+          .zone {
+            font-size: 13px;
+            align-items: center;
+            .date::before {
+              content: "";
+              position: absolute;
+              width: 1px;
+              height: 14px;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              background-color: gray;
+              @media (max-width: 400px) {
+                display: none;
+              }
+            }
+            .date,
+            .time {
+              height: fit-content;
+              span {
+                font-weight: 500;
+                opacity: 0.8;
+              }
+              i {
+                margin-right: 0.3rem;
+              }
+            }
+            @media (max-width: 400px) {
+              flex-direction: column;
+              row-gap: 5px;
+              .date,
+              .time {
+                padding: 0 !important;
+              }
+            }
+          }
+          .custom-btn {
+            font-size: 14px;
+            padding: 0 15px 2px;
+            border-radius: 15px;
+            color: white;
+            border: none;
+            background-color: orange;
+          }
+        }
+      }
+    }
+
+    .chart {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      padding: 5px 15px 15px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgba(255, 255, 255, 0.541) !important;
+}
+
+.section-title {
+  margin-bottom: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+ul.links {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+  @media (max-width: 767px) {
+    gap: 35px;
+  }
+  li {
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bolder;
+      text-transform: capitalize;
+      transition: 0.2s;
+      &.active {
+        color: red;
+        position: relative;
+        &::before {
+          content: "";
+          width: 50%;
+          height: 3px;
+          background-color: red;
+          position: absolute;
+          left: 0;
+          bottom: -7px;
+          border-radius: 30%;
+        }
+      }
+      &:not(.active):hover {
+        color: red;
+      }
+    }
+  }
+}
