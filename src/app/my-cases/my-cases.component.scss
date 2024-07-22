@@ -1,6 +1,6 @@
 .my-cases {
   .navigation-bar {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     .links {
       .active {
         color: black !important;
@@ -23,7 +23,7 @@
   .cases-details {
     row-gap: 24px;
     .test-cases {
-      gap: 24px;
+      gap: 20px 24px;
       display: flex;
       flex-wrap: wrap;
       padding-right: 18px;

@@ -1,5 +1,5 @@
 .main-statistics {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   &::before {
     content: "";
     position: absolute;
@@ -48,7 +48,7 @@
         row-gap: 20px;
         .inner-section {
           border-radius: 15px;
-          padding: 15px 20px;
+          padding: 10px 20px;
           box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
           display: flex;
           align-items: center;
